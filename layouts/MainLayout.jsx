@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import ALink from "../components/ALink/ALink";
+import Header from "../components/Header/Header";
 
 const MainLayout = ({ children, keywordsProp, titleProp }) => {
   return (
@@ -10,14 +11,11 @@ const MainLayout = ({ children, keywordsProp, titleProp }) => {
         <title>{!titleProp ? "Home" : titleProp}</title>
       </Head>
 
-      <nav className="navbar">
-        <div className="container container--navbar">
-          <ALink url={"/"} text="Home" />
-          <ALink url={"/users"} text="Users" />
-        </div>
-      </nav>
+      <Header />
 
-      <div className="container">{children}</div>
+      <main>
+        <div className="container">{children}</div>
+      </main>
     </>
   );
 };

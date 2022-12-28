@@ -34,3 +34,17 @@ ul li {
   background: #f96d00;
   padding: 15px 0;
 }
+
+.header {
+  background: #f96d00;
+  padding: 15px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.header__list {
+  display: flex;
+}
