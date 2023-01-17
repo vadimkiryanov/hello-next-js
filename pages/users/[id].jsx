@@ -21,7 +21,7 @@ const UsersSlug = ({ userOne }) => {
 // Получаем {params} вместо context
 export async function getServerSideProps({ params }) {
   const response = await fetch(
-    `https://jsonplaceholder.typicode.com/users/${params.id}` // Идет запрос
+    `${process.env.NEXT_PUBLIC_ENV_HOST_API}/users/${params.id}` // Идет запрос
   );
   const userOne = await response.json(); // Распарщенный запрос прокидывается в константу
 

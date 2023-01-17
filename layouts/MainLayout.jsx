@@ -3,7 +3,7 @@ import React from "react";
 import ALink from "../components/ALink/ALink";
 import Header from "../components/Header/Header";
 
-const MainLayout = ({ children, keywordsProp, titleProp }) => {
+const MainLayout = ({children, keywordsProp, titleProp}) => {
   return (
     <>
       <Head>
