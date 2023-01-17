@@ -27,7 +27,7 @@ export default Users;
 
 // next функция для запросов на сервер в СТАТИЧНОЙ маршрутизации
 export async function getStaticProps(context) {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTION_ENV_VARIABLE}/users`); // Идет запрос
+  const response = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE}/users`); // Идет запрос
   const usersFetch = await response.json(); // Распарщенный запрос прокидывается в константу
 
   return {

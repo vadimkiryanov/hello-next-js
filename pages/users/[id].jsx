@@ -21,7 +21,7 @@ const UsersSlug = ({ userOne }) => {
 // Получаем {params} вместо context
 export async function getServerSideProps({ params }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_PRODUCTION_ENV_VARIABLE}/users/${params.id}` // Идет запрос
+    `${process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE}/users/${params.id}` // Идет запрос
   );
   const userOne = await response.json(); // Распарщенный запрос прокидывается в константу
 
